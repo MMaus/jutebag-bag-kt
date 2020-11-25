@@ -20,13 +20,17 @@ configurations {
 }
 
 dependencies {
+
     kapt(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     kapt("io.micronaut:micronaut-inject-java")
     kapt("io.micronaut:micronaut-validation")
     kapt("io.micronaut.configuration:micronaut-openapi")
     implementation(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     implementation("io.micronaut:micronaut-inject")
-    compile('com.google.firebase:firebase-admin:6.14.0')
+
+    implementation('com.google.firebase:firebase-admin:6.14.0')
+//    implementation('com.google.firebase:firebase-auth:19.3.2')
+
     implementation("io.micronaut:micronaut-validation")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
